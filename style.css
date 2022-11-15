@@ -37,3 +37,8 @@ button{
 button a{
     text-decoration: none;
 }
+
+.mosquito{
+    height: 50px;
+    width: 50px;
+}
