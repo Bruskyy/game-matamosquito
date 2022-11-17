@@ -42,3 +42,17 @@ button a{
     height: 50px;
     width: 50px;
 }
+
+.mosquito1{
+    height: 75px;
+    width: 75px;
+}
+
+.mosquito2{
+    height: 100px;
+    width: 100px;
+}
+
+.ladoB{
+    transform: scaleX(-1);
+}
