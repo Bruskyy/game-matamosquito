@@ -3,41 +3,6 @@ body {
     background-size: cover;
 }
 
-section {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    justify-content: center;
-    align-content: center;
-
-}
-
-.div_botoes {
-    height: 300px;
-    width: 300px;
-}
-
-article,
-.div_botoes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-select {
-    margin-bottom: 50px;
-}
-
-button {
-    padding: 20px;
-    border-radius: 20px;
-}
-
-button a {
-    text-decoration: none;
-}
-
 .mosquito {
     height: 50px;
     width: 50px;

@@ -15,19 +15,17 @@ pathingGame()
 
 function randomPosition() {
 
-    if (document.getElementById('mosquito'))
+    if (document.getElementById('mosquito')) {
         document.getElementById('mosquito').remove()
-    //console.log('elemento selecionado foi: v' + vidas)
-    if (vidas > 3) {
-        alert('game over')
-    } else {
-        document.getElementById('v' + vidas).src = 'imagens/coracao_vazio.png'
+        console.log('elemento selecionado foi: v' + vidas)
+        if (vidas >= 3) {
+            window.location.href = "game_over.html"
+        } else {
+            document.getElementById('v' + vidas).src = 'imagens/coracao_vazio.png'
 
-        vidas++
+            vidas++
+        }
     }
-
-
-
     var posicaoX = Math.floor(Math.random() * largura) - 90
     var posicaoY = Math.floor(Math.random() * altura) - 90
 
