@@ -3,6 +3,7 @@ document.getElementsByTagName('html')[0].style.cursor = "url('imagens/mata_mosca
 var altura = 0
 var largura = 0
 var vidas = 1
+var tempo = 10
 
 function pathingGame() {
     altura = window.innerHeight
@@ -12,6 +13,17 @@ function pathingGame() {
 }
 
 pathingGame()
+
+var cronometro = setInterval(function () {
+
+    tempo -= 1
+    document.getElementById('cronometro').innerHTML = tempo
+
+}, 1000)
+
+if (tempo == 9) {
+    window.location.href = 'game_over.html'
+}
 
 function randomPosition() {
 
