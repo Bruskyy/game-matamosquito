@@ -1,9 +1,21 @@
-document.getElementsByTagName('html')[0].style.cursor = "url('imagens/mata_mosca.png'), auto";
-
 var altura = 0
 var largura = 0
 var vidas = 1
-var tempo = 10
+var tempo = 15
+var criaMosquitoTempo = 1500
+
+var nivel = window.location.search
+nivel = nivel.replace('?', '')
+
+if (nivel === 'normal') {
+    criaMosquitoTempo = 1500
+
+} else if (nivel === 'dificil') {
+    criaMosquitoTempo = 1000
+
+} else if (nivel === 'impossivel') {
+    criaMosquitoTempo = 750
+}
 
 function pathingGame() {
     altura = window.innerHeight
@@ -17,7 +29,13 @@ pathingGame()
 var cronometro = setInterval(function () {
 
     tempo -= 1
-    document.getElementById('cronometro').innerHTML = tempo
+
+    if (tempo < 0) {
+        clearInterval(cronometro)
+        clearInterval(criaMosquito)
+        window.location.href = 'vitoria.html'
+    } else
+        document.getElementById('cronometro').innerHTML = tempo
 
 }, 1000)
 

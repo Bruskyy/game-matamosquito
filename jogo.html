@@ -26,10 +26,13 @@
     </div>
 
     <script>
-        setInterval(function () {
+
+        document.getElementById('cronometro').innerHTML = tempo
+
+        var criaMosquito = setInterval(function () {
 
             randomPosition()
-        }, 2000)
+        }, criaMosquitoTempo)
     </script>
 </body>
 
