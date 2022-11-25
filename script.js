@@ -8,13 +8,13 @@ var nivel = window.location.search
 nivel = nivel.replace('?', '')
 
 if (nivel === 'normal') {
-    criaMosquitoTempo = 1500
+    criaMosquitoTempo = 2500
 
 } else if (nivel === 'dificil') {
-    criaMosquitoTempo = 900
+    criaMosquitoTempo = 1000
 
 } else if (nivel === 'impossivel') {
-    criaMosquitoTempo = 400
+    criaMosquitoTempo = 700
 }
 
 function pathingGame() {
